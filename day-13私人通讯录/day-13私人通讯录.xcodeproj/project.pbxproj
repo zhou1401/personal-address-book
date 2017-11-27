@@ -15,6 +15,7 @@
 		6EE6944B1FCC284500C5775C /* day_13_____UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE6944A1FCC284500C5775C /* day_13_____UITests.swift */; };
 		6EE694591FCC35D600C5775C /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE694581FCC35D600C5775C /* ListTableViewController.swift */; };
 		6EE6945B1FCC361100C5775C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE6945A1FCC361100C5775C /* DetailViewController.swift */; };
+		6EE6945D1FCC38AF00C5775C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE6945C1FCC38AF00C5775C /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		6EE6944C1FCC284500C5775C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EE694581FCC35D600C5775C /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		6EE6945A1FCC361100C5775C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		6EE6945C1FCC38AF00C5775C /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				6EE6942A1FCC284500C5775C /* AppDelegate.swift */,
 				6EE694581FCC35D600C5775C /* ListTableViewController.swift */,
 				6EE6945A1FCC361100C5775C /* DetailViewController.swift */,
+				6EE6945C1FCC38AF00C5775C /* Person.swift */,
 				6EE6942E1FCC284500C5775C /* Main.storyboard */,
 				6EE694311FCC284500C5775C /* Assets.xcassets */,
 				6EE694331FCC284500C5775C /* LaunchScreen.storyboard */,
@@ -267,6 +270,7 @@
 			files = (
 				6EE6945B1FCC361100C5775C /* DetailViewController.swift in Sources */,
 				6EE6942B1FCC284500C5775C /* AppDelegate.swift in Sources */,
+				6EE6945D1FCC38AF00C5775C /* Person.swift in Sources */,
 				6EE694591FCC35D600C5775C /* ListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
