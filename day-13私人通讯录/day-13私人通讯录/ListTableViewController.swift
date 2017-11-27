@@ -10,19 +10,42 @@ import UIKit
 
 class ListTableViewController: UITableViewController {
 
+    //联系人数组
+    var personList=[Person]()
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        loadData{(list) in
+            print(list)
+            //拼接数组，闭包中定义好的代码在需要的时候执行，需要self，指定语境
+            self.personList+=list
+            
+            //刷新表格
+            self.tableView.reloadData()
+        }
+        
+    }
+    //MARK:模拟异步，利用闭包回调
+    private func loadData(completion:@escaping (_ list:[Person])->())->(){
+        DispatchQueue.global().async {
+            print("正在努力加载中。。。")
+            Thread.sleep(forTimeInterval: 1)
+            var arrayM=[Person]()
+            
+            for i in 0..<20{
+                let p=Person()
+                p.name="zhangsan -\(i)"
+                p.phone="1840"+String(format: "%06d", arc4random_uniform(1000000))
+                p.title="boss"
+                arrayM.append(p)
+            }
+            //主线程回调
+            DispatchQueue.main.async(execute: {
+                //回调，执行闭包
+                completion(arrayM)
+            })
+            
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
 }
