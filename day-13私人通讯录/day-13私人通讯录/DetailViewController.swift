@@ -28,6 +28,17 @@ class DetailViewController: UITableViewController {
     }
     //MARK:-保存按钮事件
     @IBAction func savePerson(_ sender: Any) {
+        // 用ui更新person的内容
+        person?.name=nameText.text
+        person?.phone=phoneText.text
+        person?.title=titleText.text
+        
+        //返回上一级界面
+        //Expression of type 'UIViewController?' is unused
+        //方法的返回值没有使用
+        // _ 可以忽略一切不关心的内容！
+        _ = navigationController?.popViewController(animated: true)
+        
     }
 
 
