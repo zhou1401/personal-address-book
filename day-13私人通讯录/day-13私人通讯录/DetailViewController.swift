@@ -14,6 +14,12 @@ class DetailViewController: UITableViewController {
     @IBOutlet weak var titleText: UITextField!
     
     var person:Person?
+    
+    
+    //完成回调属性
+    //闭包的返回值是可选的
+    //var completionCallBack:()->()?
+    var completionCallBack:(()->())?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,11 +34,12 @@ class DetailViewController: UITableViewController {
     }
     //MARK:-保存按钮事件
     @IBAction func savePerson(_ sender: Any) {
-        // 用ui更新person的内容
+        //2 用ui更新person的内容
         person?.name=nameText.text
         person?.phone=phoneText.text
         person?.title=titleText.text
-        
+        //3 执行闭包回调
+        completionCallBack?()
         //返回上一级界面
         //Expression of type 'UIViewController?' is unused
         //方法的返回值没有使用
