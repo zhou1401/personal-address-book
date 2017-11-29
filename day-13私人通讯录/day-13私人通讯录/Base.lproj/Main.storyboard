@@ -101,6 +101,7 @@
                     <navigationItem key="navigationItem" title="联系人列表" id="IBx-6l-wXp">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="SkJ-ua-HZ8">
                             <connections>
+                                <action selector="newPerson:" destination="ReL-hX-bUE" id="LMH-AO-JMl"/>
                                 <segue destination="GRy-sp-6jC" kind="show" id="1IT-5O-LMp"/>
                             </connections>
                         </barButtonItem>

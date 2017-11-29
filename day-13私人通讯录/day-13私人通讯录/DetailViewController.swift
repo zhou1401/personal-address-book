@@ -34,6 +34,10 @@ class DetailViewController: UITableViewController {
     }
     //MARK:-保存按钮事件
     @IBAction func savePerson(_ sender: Any) {
+        //1.判断person 是否为nil，如果是就新建
+        if person == nil {
+            person = Person()
+        }
         //2 用ui更新person的内容
         person?.name=nameText.text
         person?.phone=phoneText.text

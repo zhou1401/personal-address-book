@@ -47,6 +47,12 @@ class ListTableViewController: UITableViewController {
         }
     }
     
+    @IBAction func newPerson(_ sender: Any) {
+        //执行seque 跳转界面
+        performSegue(withIdentifier: "listToDetail", sender: nil)
+    }
+    
+    
     //MARK: - 控制器跳转方法
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //类型转换 as
@@ -66,6 +72,18 @@ class ListTableViewController: UITableViewController {
                 self.tableView.reloadRows(at: [indexPath], with: .automatic)
             }
         
+        }else{
+            //新建个人记录
+            vc.completionCallBack = {
+                //1.获取明细控制器的person
+                guard let p = vc.person else {
+                    return
+                }
+                //2.插入到数组顶部
+                self.personList.insert(p, at: 0)
+                //3.刷新表格
+                self.tableView.reloadData()
+            }
         }
     }
     
